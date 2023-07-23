@@ -164,3 +164,52 @@ nav{
 .menu-item p{
     color: #777;
 }
+
+.menu-item:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transform: translateY(-20px)
+}
+
+#contact{
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/contact.webp);
+    padding: 80px 0px;
+}
+
+.contact-text{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-text h2{
+    font-size: 32px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.contact-text p{
+    font-size: 18px;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+.contact-form form{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,textarea{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px ;
+}
