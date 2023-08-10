@@ -3,6 +3,7 @@ console.log("welcome to tictactoe!")
 let music = new Audio("music.mp3")
 let ting = new Audio("ting.mp3")
 let gameOver = new Audio("gameover.mp3")
+let isgameOver = false;
 
 let turn = "X";
 
@@ -29,7 +30,8 @@ const checkWin = () =>{
     wins.forEach(e =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== ""))
         {
-            document.querySelector('.info').innerText = boxtext[e[0]].innerHTML + "won"
+            document.querySelector('.info').innerText = boxtext[e[0]].innerHTML + "won";
+            isgameOver = true;
         }
     })
 }
@@ -45,7 +47,10 @@ Array.from(boxes).forEach(element=>{
             turn = changeTurn();
             ting.play();
             checkWin();
-            document.getElementsByClassName("info")[0].innerText = "Turn for "+turn; 
+            if(!isgameOver)
+            {
+                document.getElementsByClassName("info")[0].innerText = "Turn for "+turn;
+            } 
         }
     })
 })
