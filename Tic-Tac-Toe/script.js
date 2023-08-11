@@ -14,7 +14,7 @@ const changeTurn = () =>{
 }
 
 //Function to check for a win
-
+// music.play();
 const checkWin = () =>{
     let boxtext = document.getElementsByClassName('boxtext')
     let wins = [
@@ -32,6 +32,7 @@ const checkWin = () =>{
         {
             document.querySelector('.info').innerText = boxtext[e[0]].innerHTML + "won";
             isgameOver = true;
+            document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width = "56px" 
         }
     })
 }
