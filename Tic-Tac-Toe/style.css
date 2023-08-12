@@ -51,6 +51,10 @@ nav ul{
     background-color: blueviolet ;
 }
 
+.info{
+    font-size: 20px;
+}
+
 .gameInfo{
     padding: 34px;
 }
@@ -75,4 +79,15 @@ nav ul{
 
 .bb-0{
     border-bottom: 0;
+}
+
+#reset{
+    margin: 0 15px;
+    padding: 2px 5px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Borel', cursive;
+    font-family: 'Varela Round', sans-serif;
 }
