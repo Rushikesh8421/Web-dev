@@ -3,6 +3,7 @@
 *{
     margin:0;
     padding: 0;
+    
 }
 
 nav{
@@ -22,11 +23,11 @@ nav ul{
 }
 
 .gameContainer{
-    background-color: rgb(193, 83, 83);
+    /* background-color: rgb(193, 83, 83); */
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    color: white;
+    /* margin-top: 20px; */
+    color: black;
 }
 
 .container{
@@ -36,6 +37,7 @@ nav ul{
     font-family: 'Borel', cursive;
     font-family: 'Varela Round', sans-serif;
     margin: 12px 0;
+    position: relative;
 }
 
 .box{
@@ -90,4 +92,26 @@ nav ul{
     cursor: pointer;
     font-family: 'Borel', cursive;
     font-family: 'Varela Round', sans-serif;
+}
+
+.line{
+    background-color: black;
+    width: 20vw;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 900px) 
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }   
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
 }
